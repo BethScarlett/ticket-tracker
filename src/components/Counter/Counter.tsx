@@ -14,11 +14,21 @@ const Counter = () => {
 
   return (
     <div className="counter">
-      <h3>Counter</h3>
-      <h3>{counter}</h3>
+      <h3>Tickets</h3>
+      <h3 className="counter__heading">{counter}</h3>
       <div className="counter__buttons">
-        <button onClick={() => handleCounterChange(`-`)}>-</button>
-        <button onClick={() => handleCounterChange(`+`)}>+</button>
+        <button
+          onClick={() => handleCounterChange(`-`)}
+          className="counter__buttons--button"
+        >
+          -
+        </button>
+        <button
+          onClick={() => handleCounterChange(`+`)}
+          className="counter__buttons--button"
+        >
+          +
+        </button>
       </div>
     </div>
   );

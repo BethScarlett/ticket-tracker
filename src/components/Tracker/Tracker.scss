@@ -10,18 +10,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: left;
 
   &__card {
     border: 2px solid $tracker-border;
-    height: 250px;
+    height: 300px;
     width: 250px;
-    margin: 10px 20px;
+    margin: 30px 40px;
 
     &--counter {
       display: flex;
       justify-content: center;
       text-align: center;
       margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 359px) {
+  .tracker__card {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1781px) {
+  .tracker__card {
+    width: 15%;
+    height: 345px;
+
+    &--counter {
+      margin-top: 60px;
     }
   }
 }
