@@ -6,7 +6,9 @@ const App = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <Tracker team={team} />
+      <div>
+        <Tracker team={team} />
+      </div>
     </div>
   );
 };

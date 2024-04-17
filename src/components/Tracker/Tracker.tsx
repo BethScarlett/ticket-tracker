@@ -8,12 +8,14 @@ type Employee = {
 const Tracker = ({ team }: Employee) => {
   const employeeArr = [...team];
   return (
-    <div>
+    <div className="tracker">
       {employeeArr.map((employee: Team) => (
-        <div className="tracker">
+        <div key={employee.id} className="tracker__card">
           <h2>Name: {employee.name}</h2>
           <h2>Role: {employee.role}</h2>
-          <Counter />
+          <div className="tracker__card--counter">
+            <Counter />
+          </div>
         </div>
       ))}
     </div>

@@ -7,6 +7,21 @@
 }
 
 .tracker {
-  border: 2px solid $tracker-border;
-  width: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__card {
+    border: 2px solid $tracker-border;
+    height: 250px;
+    width: 250px;
+    margin: 10px 20px;
+
+    &--counter {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
 }
