@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Counter from "../Counter/Counter";
 import "./Tracker.scss";
 
@@ -11,8 +12,10 @@ const Tracker = ({ team }: Employee) => {
     <div className="tracker">
       {employeeArr.map((employee: Team) => (
         <div key={employee.id} className="tracker__card">
-          <h2>Name: {employee.name}</h2>
-          <h2>Role: {employee.role}</h2>
+          <Link to="/profile">
+            <h2>Name: {employee.name}</h2>
+            <h2>Role: {employee.role}</h2>
+          </Link>
           <div className="tracker__card--counter">
             <Counter />
           </div>
